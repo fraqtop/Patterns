@@ -7,6 +7,6 @@ class JeepBody implements IBody
 {
     function crash()
     {
-        echo "jeep body crashed</br>";
+        echo "jeep body crashed", PHP_EOL;
     }
 }

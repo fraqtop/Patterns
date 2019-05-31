@@ -13,11 +13,11 @@ class Iphone implements IDevice
 {
     public function takePhoto()
     {
-        echo "iphone is making a photo";
+        echo "iphone is making a photo", PHP_EOL;
     }
 
     public function makeCall()
     {
-        echo "iphone is calling";
+        echo "iphone is calling", PHP_EOL;
     }
 }

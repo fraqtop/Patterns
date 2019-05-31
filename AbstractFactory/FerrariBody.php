@@ -7,7 +7,7 @@ class FerrariBody implements IBody
 {
     function crash()
     {
-        echo "ferrari body crashed</br>";
+        echo "ferrari body crashed", PHP_EOL;
     }
 
 }

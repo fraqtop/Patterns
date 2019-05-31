@@ -7,6 +7,6 @@ class BorderDecorator extends AbstractDecorator
 {
     function afterDraw()
     {
-        echo "...with border </br>";
+        echo "...with border", PHP_EOL;
     }
 }

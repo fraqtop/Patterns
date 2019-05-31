@@ -7,7 +7,7 @@ class Window implements IRectangle
 {
     function drawShape()
     {
-        echo "window was drawn</br>";
+        echo "window was drawn", PHP_EOL;
     }
 
 }

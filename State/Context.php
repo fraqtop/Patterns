@@ -11,7 +11,7 @@ class Context implements IState
     const STATE_2 = 2;
     const STATE_3 = 3;
 
-    public function setState($newState)
+    public function setState(int $newState)
     {
         switch ($newState)
         {

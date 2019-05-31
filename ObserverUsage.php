@@ -1,8 +1,13 @@
 <?php
 spl_autoload_register();
-use Observer\{Publisher, Listener};
+use Observer\{SecurityManager, Logger, MailingNotifier};
 
-$publisher = new Publisher();
-$publisher->addListener(new Listener());
-$publisher->addListener(new Listener());
-$publisher->publish("the winter is coming");
+$manager = new SecurityManager();
+
+new Logger($manager);
+new MailingNotifier($manager);
+
+$manager->checkPermissions([
+    'name' => 'Howard Moon',
+    'permissionLevel' => 3
+]);

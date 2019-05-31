@@ -7,7 +7,7 @@ class KnockoutState implements IState
 {
     function action()
     {
-        echo "fighter is on the ground</br>";
+        echo "fighter is on the ground", PHP_EOL;
     }
 
 }

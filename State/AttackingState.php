@@ -7,7 +7,7 @@ class AttackingState implements IState
 {
     function action()
     {
-        echo "fighter is attacking</br>";
+        echo "fighter is attacking", PHP_EOL;
     }
 
 }

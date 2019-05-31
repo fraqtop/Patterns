@@ -7,6 +7,6 @@ class Engine
 {
     public function start()
     {
-        echo "the engine was started</br>";
+        echo "the engine was started", PHP_EOL;
     }
 }

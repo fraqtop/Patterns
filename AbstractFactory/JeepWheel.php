@@ -7,6 +7,6 @@ class JeepWheel implements IWheel
 {
     function rotate()
     {
-        echo "jeep wheel rotates</br>";
+        echo "jeep wheel rotates", PHP_EOL;
     }
 }

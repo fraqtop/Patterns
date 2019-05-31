@@ -1,11 +1,12 @@
 <?php
 spl_autoload_register();
-use Adapter\PagePrinter as PagePrinter;
+use Adapter\PagePrinter as Printer;
 
-$pagePrinter = new PagePrinter();
-$page = array();
-$page[] = "don't look back";
-$page[] = "life is short";
-$page[] = "more to play";
-$page[] = "less to work";
+$pagePrinter = new Printer();
+$page = [
+    'now i will try',
+    'to print',
+    'multiline',
+    'text'
+];
 $pagePrinter->printPage($page);

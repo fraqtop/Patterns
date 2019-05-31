@@ -7,6 +7,6 @@ class Wheel
 {
     public function rotate()
     {
-        echo "the wheel was rotated</br>";
+        echo "the wheel was rotated", PHP_EOL;
     }
 }

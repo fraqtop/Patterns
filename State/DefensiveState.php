@@ -7,7 +7,7 @@ class DefensiveState implements  IState
 {
     function action()
     {
-        echo "fighter defends</br>";
+        echo "fighter defends", PHP_EOL;
     }
 
 }
