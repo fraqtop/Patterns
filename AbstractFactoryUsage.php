@@ -1,9 +1,11 @@
 <?php
 spl_autoload_register();
-use AbstractFactory\{Jeep, Ferrari};
+use AbstractFactory\{ArcticTerrain, TropicTerrain};
 
-$ferrari = new Ferrari();
-$jeep = new Jeep();
+$terrain = random_int(0, 1) ? new ArcticTerrain(): new TropicTerrain();
 
-$ferrari->bump();
-$jeep->rotateWheels();
+$animal = $terrain->getAnimal();
+$bird = $terrain->getBird();
+
+$animal->walk();
+$bird->fly();

@@ -2,29 +2,45 @@
 
 namespace State;
 
-
+/**
+ * Class Fighter
+ * @package State
+ *
+ * @property AbstractState $state
+ */
 class Fighter
 {
-    private $context;
+    private $state;
+
     function __construct()
     {
-        $this->context = new Context();
+        $this->setState(new WaitingState());
     }
 
-    function makeReaction($opponentAct)
+    public function setState(AbstractState $state)
     {
-        switch ($opponentAct)
-        {
-            case "defend":
-                $this->context->setState(1);
-                break;
-            case "attack":
-                $this->context->setState(2);
-                break;
-            case "massive hook":
-                $this->context->setState(3);
-                break;
-        }
-        $this->context->action();
+        $this->state = $state;
+        $this->state->setFighter($this);
     }
+
+    function react()
+    {
+        $this->state->act();
+    }
+
+    public function punch()
+    {
+        echo 'trying to punch opponent', PHP_EOL;
+    }
+
+    public function stepForward()
+    {
+        echo 'made step forward', PHP_EOL;
+    }
+
+    public function stepBack()
+    {
+        echo 'made step back', PHP_EOL;
+    }
+
 }

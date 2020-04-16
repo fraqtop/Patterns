@@ -1,11 +1,7 @@
 <?php
 spl_autoload_register();
-use FactoryMethod\{RussianFabric, AmericanFabric};
+use FactoryMethod\{Bow, Handgun};
 
-$rusFabric = new RussianFabric();
-$usaFabric = new AmericanFabric();
-$device = $rusFabric->createDevice();
-$device->makeCall();
-echo "</br>";
-$device = $usaFabric->createDevice();
-$device->takePhoto();
+$concreteWeapon = (boolean)random_int(0, 1)? new Handgun(): new Bow();
+
+echo $concreteWeapon->shot();

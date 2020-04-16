@@ -3,11 +3,14 @@
 namespace State;
 
 
-class AttackingState implements IState
+class AttackingState extends AbstractState
 {
-    function action()
+    public function act() : void
     {
-        echo "fighter is attacking", PHP_EOL;
+        echo 'trying to kick opponent\'s ass', PHP_EOL;
+        $this->fighter->stepForward();
+        $this->fighter->punch();
+        $this->fighter->setState(new DefensiveState());
     }
 
 }

@@ -3,11 +3,13 @@
 namespace State;
 
 
-class DefensiveState implements  IState
+class DefensiveState extends AbstractState
 {
-    function action()
+    public function act() : void
     {
-        echo "fighter defends", PHP_EOL;
+        $this->fighter->stepBack();
+        echo 'fighter is in defence', PHP_EOL;
+        $this->fighter->setState(new WaitingState());
     }
 
 }
